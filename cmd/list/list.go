@@ -17,9 +17,9 @@ var search string
 
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "Lists all code snippet saved with Snippy [--tags -t, --lang -l, --code -c]",
+	Short: "Lists all code snippet saved with Snippy",
 	Args:  cobra.MaximumNArgs(0),
-	Long:  "Lists all code snippet saved with Snippy [--tags -t, --lang -l, --code -c]",
+	Long:  "Lists all code snippet saved with Snippy",
 	Run:   run,
 }
 

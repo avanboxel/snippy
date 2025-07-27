@@ -17,7 +17,7 @@ var addCmd = &cobra.Command{
 	Use:   "add",
 	Short: "Adds a code snippet to Snippy",
 	Args:  cobra.MaximumNArgs(1),
-	Long:  `All software has versions. This is Snippy's`,
+	Long:  `Adds a code snippet to Snippy`,
 	Run:   run,
 }
 
