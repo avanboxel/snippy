@@ -50,6 +50,29 @@ snippy list --search "Hello World"
 snippy list -s "Hello World"
 ```
 
+### Clean snippets
+
+```bash
+# Clean all snippets
+snippy clean
+
+# Clean snippet by id
+snippy clean --id 1234
+snippy clean -i 1234
+
+# Clean all snippets by language
+snippy clean --lang go
+snippy clean -l go
+
+# Clean all snippets by tags
+snippy clean --tags example
+snippy clean -t example
+
+# Clean all snippets by part of code
+snippy clean --search "Hello World"
+snippy clean -s "Hello World"
+```
+
 ## License
 
 MIT

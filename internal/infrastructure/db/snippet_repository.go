@@ -139,7 +139,7 @@ func (s *SQLiteDB) SearchSnippets(
 	}
 	if lang != "" {
 		args = append(args, "%"+lang+"%")
-		whereString = whereString + " lang LIKE ? "
+		whereString = whereString + " language LIKE ? "
 	}
 	if len(tags) > 0 {
 		args = append(args, strings.Join(tags, ","))

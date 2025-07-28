@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/avanboxel/snippy/cmd/add"
+	"github.com/avanboxel/snippy/cmd/clean"
 	"github.com/avanboxel/snippy/cmd/list"
 	"github.com/spf13/cobra"
 )
@@ -25,4 +26,5 @@ func init() {
 	rootCmd.AddCommand(versionCmd)
 	rootCmd.AddCommand(add.Init())
 	rootCmd.AddCommand(list.Init())
+	rootCmd.AddCommand(clean.Init())
 }

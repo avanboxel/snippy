@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"strconv"
 	"strings"
 
 	"github.com/avanboxel/snippy/internal/application/queries"
@@ -52,6 +53,7 @@ func run(cmd *cobra.Command, args []string) {
 
 	for _, v := range s {
 		fmt.Println(strings.Repeat("=", 20) + "<snippet>" + strings.Repeat("=", 20))
+		fmt.Println("Id:\n\t" + strconv.Itoa(v.Id))
 		fmt.Println("Language:\n\t" + v.Language)
 		fmt.Println("Tags:\n\t" + strings.Join(v.Tags, ", "))
 		fmt.Println("Code:")
