@@ -15,6 +15,7 @@ import (
 var lang string
 var tags string
 var search string
+var id int
 
 var listCmd = &cobra.Command{
 	Use:   "list",
@@ -29,6 +30,7 @@ func Init() *cobra.Command {
 	c.PersistentFlags().StringVarP(&lang, "lang", "l", "", "Language (optional)")
 	c.PersistentFlags().StringVarP(&tags, "tags", "t", "", "Tags (comma-separated, optional)")
 	c.PersistentFlags().StringVarP(&search, "search", "s", "", "Search by part of snippet (optional)")
+	c.PersistentFlags().IntVarP(&id, "id", "i", 0, "Id (optional)")
 	return c
 }
 
@@ -39,6 +41,7 @@ func run(cmd *cobra.Command, args []string) {
 	}
 	q.Code = search
 	q.Lang = lang
+	q.Id = id
 
 	db, err := db.NewSQLite()
 	if err != nil {

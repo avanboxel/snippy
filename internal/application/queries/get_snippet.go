@@ -17,6 +17,15 @@ func GetSnippets(r repositories.SnippetRepository, q GetSnippetsQuery) []models.
 		l, _ := r.ListSnippets()
 		return l
 	}
+
+	if q.Id != 0 {
+		s, _ := r.GetSnippet(q.Id)
+		if s == nil {
+			return []models.Snippet{}
+		}
+		return []models.Snippet{*s}
+	}
+
 	l, _ := r.SearchSnippets(q.Code, q.Lang, q.Tags)
 	return l
 }

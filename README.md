@@ -37,6 +37,10 @@ snippy add --lang go --tags example < app.js
 # List all snippets
 snippy list
 
+# List a single snippet by id
+snippy list --id 123
+snippy list -i 123
+
 # Filter by language
 snippy list --lang go
 snippy list -l go
